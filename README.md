@@ -106,7 +106,7 @@ If the DINEOF process finishes but the output file is corrupted (e.g., due to co
 To reconstruct the output from `eof.nc` and `meandata.val`:
 
 ```bash
-/home/sebastian.cornejo/miniconda3/envs/dineof_env/bin/python3 reconstruct_dineof.py reconstruct \
+~/miniconda3/envs/dineof_env/bin/python3 reconstruct_dineof.py reconstruct \
     --eof DINEOF_Parallel/Output/eof.nc \
     --mean DINEOF_Parallel/Output/meandata.val \
     --mask DINEOF_input_v02_mask2d_1764175426.nc \
@@ -118,7 +118,7 @@ To reconstruct the output from `eof.nc` and `meandata.val`:
 To interpolate new data (e.g., new time steps) using the existing EOF basis:
 
 ```bash
-/home/sebastian.cornejo/miniconda3/envs/dineof_env/bin/python3 reconstruct_dineof.py project \
+~/miniconda3/envs/dineof_env/bin/python3 reconstruct_dineof.py project \
     --eof DINEOF_Parallel/Output/eof.nc \
     --mean DINEOF_Parallel/Output/meandata.val \
     --new path/to/new_data.nc \
