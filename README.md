@@ -98,6 +98,34 @@ This version is designed to run on **Linux**, **macOS**, and **Windows (via WSL)
     ./run_dineof_parallel.sh
     ```
 
+## Reconstruction and Projection
+
+If the DINEOF process finishes but the output file is corrupted (e.g., due to configuration errors), or if you want to project new data onto the existing EOFs, use the `reconstruct_dineof.py` script.
+
+### Reconstruction
+To reconstruct the output from `eof.nc` and `meandata.val`:
+
+```bash
+/home/sebastian.cornejo/miniconda3/envs/dineof_env/bin/python3 reconstruct_dineof.py reconstruct \
+    --eof DINEOF_Parallel/Output/eof.nc \
+    --mean DINEOF_Parallel/Output/meandata.val \
+    --mask DINEOF_input_v02_mask2d_1764175426.nc \
+    --output DINEOF_Parallel/Output/dineof_reconstructed.nc \
+    --chunk 100
+```
+
+### Projection (New Data)
+To interpolate new data (e.g., new time steps) using the existing EOF basis:
+
+```bash
+/home/sebastian.cornejo/miniconda3/envs/dineof_env/bin/python3 reconstruct_dineof.py project \
+    --eof DINEOF_Parallel/Output/eof.nc \
+    --mean DINEOF_Parallel/Output/meandata.val \
+    --new path/to/new_data.nc \
+    --output path/to/projected_output.nc \
+    --chunk 100
+```
+
 ---
 
 ## ⚙️ Configuration
