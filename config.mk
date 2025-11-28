@@ -81,7 +81,7 @@ STATIC ?=
 # NETCDF_INCDIR, NETCDF_LIBDIR and NETCDF_LIB are not used
 #==========================================================================
 
-NETCDF_CONFIG ?= /home/sebastian.cornejo/miniconda3/envs/dineof_env/bin/nf-config
+NETCDF_CONFIG ?= ~/miniconda3/envs/dineof_env/bin/nf-config
 
 #==========================================================================
 # This directory should contains a file usually called netcdf.inc and 
@@ -119,7 +119,7 @@ NETCDF_CONFIG ?= /home/sebastian.cornejo/miniconda3/envs/dineof_env/bin/nf-confi
 #==========================================================================
 
 #ARPACK_LIBDIR ?=
-ARPACK_LIBDIR ?= /home/sebastian.cornejo/miniconda3/envs/dineof_env/lib
+ARPACK_LIBDIR ?= ~/miniconda3/envs/dineof_env/lib
 ARPACK_LIB ?= -larpack
 
 # Extra linker flags for macOS (add netcdf lib path)
